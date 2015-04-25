@@ -1,0 +1,29 @@
+
+
+.DashboardProfileCard-userFields {
+  position: absolute;
+  top: 103px;
+  left: 90px;
+  width: 185px;
+visibility: hidden  !important ;
+	display: none;
+}
+	
+.ProfileHeaderCard-name
+{
+	visibility: hidden  !important ;
+}
+
+.ProfileHeaderCard{
+	visibility: hidden  !important ;
+}
+
+.ProfileHeaderCard-nameLink
+{
+	visibility: hidden  !important;
+}
+
+.ProfileCardMini
+{
+	visibility: hidden !important;
+}

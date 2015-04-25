@@ -1,0 +1,46 @@
+{
+	
+    "name": "HideMe!",
+    "version": "1.0",
+	"manifest_version": 2,		//required
+	
+    "description": "Hide your twitter handle from people looking over your shoulder",
+	
+	
+	 "permissions":
+	[
+		"activeTab"
+	],
+	
+	"icons": { 
+				"16": "images/icon.png"
+		  	 },
+	
+	"browser_action": {
+	
+				"default_icon": "images/icon.png",
+				"default_title": "HideMe!"
+				
+			},
+		
+	 
+	//prevent XSS vulnerabilities in your extension
+	"content_security_policy": "default-src 'self' ",
+	//http://code.google.com/chrome/extensions/manifest.html#minimum_chrome_version
+	"minimum_chrome_version": "20.0.1132.47",
+	//http://code.google.com/chrome/extensions/options.html
+	"options_page": "options.html",
+	//a single long-running script to manage some task or state
+	"background_page": "background.html",
+	//http://code.google.com/chrome/extensions/content_scripts.html
+    
+	"content_scripts": [
+    {
+        "matches": [ "http://twitter.com/*", "https://twitter.com/*"],
+        "js": ["js/contentscript.js"],
+        "all_frames": true
+    }
+	],
+	
+	"web_accessible_resources": ["styles/inject.css" , "styles/buttons.css", "styles/options.css"]
+}
