@@ -28,7 +28,11 @@ visibility: hidden  !important ;
 	visibility: hidden !important;
 }
 
-.twitter-atreply pretty-link js-nav
+
+
+a.twitter-atreply.pretty-link.js-nav
 {
 	visibility: hidden !important;
+	display:  none;
 }
+
